@@ -5,7 +5,7 @@
              x:Class="Goose.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout>
+    <Grid>
         <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None" HasUnevenRows="True" BackgroundColor="#FCFCFC">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -17,5 +17,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
+        <controls:EdgeShadow HeightRequest="5" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+    </Grid>
 </ContentPage>
