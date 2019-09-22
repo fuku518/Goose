@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Goose.Controls"
              x:Class="Goose.Views.MainPage"
              Title="{Binding Title}">
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None" HasUnevenRows="True" BackgroundColor="WhiteSmoke">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None" HasUnevenRows="True" BackgroundColor="#FCFCFC">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame Margin="10,15,10,0" Padding="10" HasShadow="False" CornerRadius="1" OutlineColor="Gainsboro" BackgroundColor="White">
+                        <controls:DropShadowFrame Margin="10,15,10,0" Padding="10" HasShadow="False" CornerRadius="1" BackgroundColor="White">
                             <Label Text="{Binding title}"/>
-                        </Frame>
+                        </controls:DropShadowFrame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
