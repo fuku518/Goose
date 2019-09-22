@@ -5,11 +5,13 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Items}">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding title}"/>
+                        <Grid BackgroundColor="White" Margin="5">
+                            <Label Text="{Binding title}"/>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

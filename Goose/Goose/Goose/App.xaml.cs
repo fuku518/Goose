@@ -4,6 +4,7 @@ using Goose.ViewModels;
 using Goose.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Goose.Controls;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Goose
@@ -28,7 +29,7 @@ namespace Goose
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<ColoredNavigationPage>("NavigationPage");
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
     }
