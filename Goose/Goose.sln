@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goose", "Goose\Goose\Goose.csproj", "{570BCA1E-173E-4703-A6E6-12B48B493655}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goose", "Goose\Goose\Goose.csproj", "{570BCA1E-173E-4703-A6E6-12B48B493655}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goose.Android", "Goose\Goose.Android\Goose.Android.csproj", "{EE356C09-1CF0-46A0-95B1-9386CFA55F5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goose.iOS", "Goose\Goose.iOS\Goose.iOS.csproj", "{FB8F557F-BC9A-448C-9E6D-822B4C105113}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Goose.Shared", "Goose.Shared\Goose.Shared.shproj", "{A389275F-1504-4A1C-BB57-C496CD2B4F10}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Goose.Shared\Goose.Shared.projitems*{a389275f-1504-4a1c-bb57-c496cd2b4f10}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
