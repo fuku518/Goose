@@ -5,12 +5,15 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid BackgroundColor="White" Margin="5">
-                            <Label Text="{Binding title}"/>
+                        <Grid>
+                            <BoxView BackgroundColor="Gainsboro" VerticalOptions="End" HeightRequest="1"/>
+                            <Grid BackgroundColor="White" Margin="5" Padding="10,5">
+                                <Label Text="{Binding title}"/>
+                            </Grid>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

@@ -19,7 +19,7 @@ namespace Goose.Service
 
         public static async Task<IEnumerable<Item>> GetItemsAsync()
         {
-            var uri = GetApiUri("items");
+            var uri = GetApiUri("tags/Xamarin/items");
             using (var hc = new HttpClient())
             {
                 var json = await hc.GetStringAsync(uri);
