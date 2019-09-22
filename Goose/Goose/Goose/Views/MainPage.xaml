@@ -9,12 +9,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
-                            <BoxView BackgroundColor="Gainsboro" VerticalOptions="End" HeightRequest="1"/>
-                            <Grid BackgroundColor="White" Margin="5" Padding="10,5">
-                                <Label Text="{Binding title}"/>
-                            </Grid>
-                        </Grid>
+                        <Frame Margin="10,10" HasShadow="True">
+                            <Label Text="{Binding title}"/>
+                        </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
