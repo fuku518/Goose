@@ -5,11 +5,11 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None" HasUnevenRows="True">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" SeparatorVisibility="None" HasUnevenRows="True" BackgroundColor="WhiteSmoke">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame Margin="10,10" HasShadow="True">
+                        <Frame Margin="10,15,10,0" Padding="10" HasShadow="False" CornerRadius="1" OutlineColor="Gainsboro" BackgroundColor="White">
                             <Label Text="{Binding title}"/>
                         </Frame>
                     </ViewCell>
