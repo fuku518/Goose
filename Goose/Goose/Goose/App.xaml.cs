@@ -29,7 +29,7 @@ namespace Goose
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<ColoredNavigationPage>("NavigationPage");
+            containerRegistry.RegisterForNavigation<NavigationPageGradientHeader>("NavigationPage");
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
     }

@@ -5,11 +5,10 @@ using Xamarin.Forms;
 
 namespace Goose.Controls
 {
-    public class ColoredNavigationPage : NavigationPage
+    public class NavigationPageGradientHeader : ColoredNavigationPage
     {
-        public ColoredNavigationPage() : base()
+        public NavigationPageGradientHeader() : base()
         {
-            BarTextColor = Color.White;
         }
     }
 }
