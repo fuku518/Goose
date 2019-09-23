@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Goose.Models
@@ -22,6 +23,12 @@ namespace Goose.Models
         public string url { get; set; }
         public User user { get; set; }
         public object page_views_count { get; set; }
+
+
+        public string Tags
+        {
+            get => string.Join("  ", tags.Select(x => x.name));
+        }
     }
 
     public class User

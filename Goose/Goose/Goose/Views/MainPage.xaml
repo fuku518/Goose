@@ -10,8 +10,43 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <controls:DropShadowFrame Margin="10,15,10,0" Padding="10" HasShadow="False" CornerRadius="1" BackgroundColor="White">
-                            <Label Text="{Binding title}"/>
+                        <controls:DropShadowFrame Margin="10,15,10,0" Padding="10" HasShadow="False" CornerRadius="1" BackgroundColor="White" HeightRequest="130">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding title}" LineBreakMode="NoWrap"/>
+                                <ContentView Grid.Row="1" Grid.Column="0" Padding="5">
+                                    <Label Text="{Binding body}" LineBreakMode="CharacterWrap" FontSize="Small" TextColor="DimGray"/>
+                                </ContentView>
+                                <ScrollView Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                                    <controls:RepeaterView Orientation="Horizontal" ItemsSource="{Binding tags}">
+                                        <controls:RepeaterView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <ContentView BackgroundColor="WhiteSmoke" Margin="4,2" Padding="4">
+                                                        <Label Text="{Binding name}" TextColor="DimGray" FontSize="Micro" LineBreakMode="NoWrap"/>
+                                                    </ContentView>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </controls:RepeaterView.ItemTemplate>
+                                    </controls:RepeaterView>
+                                </ScrollView>
+                                <Grid Grid.Row="3" Grid.Column="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Label Text="{Binding likes_count}" FontSize="Micro" TextColor="#E91E63"/>
+                                        <Label Text="{Binding user.name}" FontSize="Micro" LineBreakMode="NoWrap"/>
+                                    </StackLayout>
+                                    <Label Grid.Column="1" Text="{Binding updated_at}" FontSize="Micro"/>
+                                </Grid>
+                            </Grid>
                         </controls:DropShadowFrame>
                     </ViewCell>
                 </DataTemplate>
